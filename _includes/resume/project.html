@@ -1,0 +1,55 @@
+<!-- 项目经验 -->
+{%- if site.data.resume.projects -%}
+{%- assign projects = site.data.resume.projects -%}
+<section class="project info-unit">
+    <h2>
+        <i class="fa fa-terminal" aria-hidden="true"></i>个人项目</h2>
+    <hr />
+    <ul>
+        {%- for item in projects -%}
+        <li>
+            <h3>
+                <span>[项目{{ forloop.index }}]{{ item.name }}</span>
+                {%- if item.url -%}
+                <span class="link">
+                    <a href="{{ item.url }}" target="_blank">Demo</a>
+                </span>
+                {%- endif -%}
+                <time>{{ item.time }}</time>
+            </h3>
+            <div class="info-content">
+                {%- if item.stack -%}
+                <i class="fa fa-magic" aria-hidden="true"></i>
+                [技术栈]：{{ item.stack }}
+                <br />
+                {%- endif -%}
+
+                {%- if item.goal -%}
+                <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                [目标]：{{ item.goal }}
+                <br />
+                {%- endif -%}
+                
+                {%- if item.team -%}
+                <i class="fa fa-users" aria-hidden="true"></i>
+                [团队]：{{ item.team }}
+                <br />
+                {%- endif -%}
+
+                {%- if item.contribution -%}
+                <i class="fa fa-bars" aria-hidden="true"></i>
+                [贡献]：{{ item.contribution }}
+                <br />
+                {%- endif -%}
+
+                {%- if item.result -%}
+                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                [效果]：{{ item.result }}
+                {%- endif -%}
+
+            </div>
+        </li>
+        {%- endfor -%}
+    </ul>
+</section>
+{%- endif -%}

@@ -1,0 +1,24 @@
+<!-- 工作经历 -->
+{%- if site.data.resume.work -%}
+{%- assign work = site.data.resume.work -%}
+<section class="work info-unit">
+    <h2>
+        <i class="fa fa-shopping-bag" aria-hidden="true"></i>工作经历</h2>
+    <hr />
+    <ul>
+        {%- for item in work -%}
+        <li>
+            <h3>
+                <span>[经历{{ forloop.index }}]{{ item.company }}－{{ item.job }}{{ item.job_desc }}</span>
+                <time>{{ item.time }}</time>
+            </h3>
+            <ul class="info-content">
+                {%- for info in item.info -%}
+                <li>{{ info }}</li>
+                {%- endfor -%}
+            </ul>
+        </li>
+        {%- endfor -%}
+    </ul>
+</section>
+{%- endif -%}

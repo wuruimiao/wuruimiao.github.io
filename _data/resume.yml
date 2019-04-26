@@ -1,0 +1,104 @@
+my_name: 吴瑞苗
+job: 后端开发工程师
+location: 北京
+base:
+  - title: 个人信息
+    info: 男 / 25岁
+  - title: 祖籍
+    info: 江苏南京
+contact:
+  - title: 手机号
+    info: 186-1261-6842
+    url: "tel:18612616842"
+  - title: 邮箱
+    info: "dev.wuruimiao@gmail.com"
+    url: "mailto:dev.wuruimiao@gmail.com"
+  - title: 个人主页
+    info: "wuruimiao.gitee.com"
+    url: "https://uruimiao.gitee.com"
+  - title: github
+    # info: "github.com/wuruimiao"
+    url: "https://www.github.com/wuruimiao"
+education:
+  - college: "吉林师范大学"
+    major: "信息管理与信息系统"
+    degree: 本科
+    time: 2012.09-2016.07
+    # info: 专业排名<mark>X/XX</mark>，期间发表国际会议英文摘要X篇，国内核心期刊文章X篇（其中第一作者X篇），获XXX，XXX2次，XXX2次。(此处根据自身情况填写，可以突出自己的亮点，或者跟求职目标相关的内容)
+skills:
+  - title: Python
+    achieve: 90
+    peak: 100
+  - title: NodeJS
+    achieve: 80
+    peak: 100
+  - title: Linux
+    achieve: 60
+    peak: 100
+  - title: MySQL
+    achieve: 50
+    peak: 100
+  - title: Redis
+    achieve: 60
+    peak: 100
+  - title: Git, SVN
+    achieve: 80
+    peak: 100
+unskilled:
+  - title: 前端
+    info: React、jQuery、Bootstrap、SASS、LESS
+  - title: 后端
+    info: C、php、Golang
+qrcode:
+work:
+  - company: "简单科技公司"
+    job: "全栈开发工程师"
+    job_desc: （全职）
+    time: 2016.06 至 2019.06
+    info:
+      - "负责<mark>简教练产品</mark>官网及管理后台项目的技术方案设计及开发，代码review及管理"
+      - "官网及电商"
+      - "提供学生关于课程的功能，包括购买课程、预约课程、调整课程、退费等"
+      - "后端使用 Python 开发，采用 Thrift 框架提供服务，再由 Koa2 框架调用服务，提供前端(ReactJS)接口;其中，使用 Redis 存储登陆 Session，及一些其他信息"
+      - "使用 ab 进行压力测试，测量接口性能=>关注服务器、数据库压力=>使用 cProfile，配合 gprof2dot 分析，定位瓶颈，优化代码算法及结构"
+      - "线上部署采用 Nginx 代理前端请求;同时使用 HAProxy 基于 TCP 进行 Thrift 服务间的负载均衡，服务进程通过Supervisor 进行管理"
+      - "管理后台"
+      - "提供课程、老师、学员等管理功能"
+      - "后端使用 Python 开发，采用 Thrift 框架提供服务，再由 Django 框架调用 Thrift 服务，提供前端接口 "
+      - "老平台的前端使用 ExtJS 开发，接手维护一段时间后，深感其陈旧且维护成本高;遂利用空余时间练习ReactJS，采用阿里开源的 AntDesign 重构其前端"
+      # - 深度参与XX项目迭代XX的前端开发工作，独立承担并完成XX、XX、XXXX等功能点的开发，主要维护并修复XX、XX、XX等功能点bug若干。
+      # - 项目采用技术栈<mark>React+React Router+Node.js+SASS</mark>，实现<mark>前后端完全分离</mark>。
+      # - 配合UI和后端，根据产品需求提供H5页面嵌入到后台模板，要求<mark>移动端显示正常</mark>。
+      # - 主要参与XXXXXXX的静态页面开发工作，要求<mark>在支付宝环境下完全兼容</mark>。
+  - company: "搜狐畅游公司"
+    job: "运维开发工程师"
+    job_desc: （实习）
+    time: 2015.07 至 2016.05
+    info:
+      - "负责运维自动化平台开发，以及游戏“鹿鼎记”的运维"
+      - "提供可配置的流程操作，减少重复性工作"
+      - "主要负责项目进度安排，以及任务管理和执行等功能的开发"
+      - "后端使用 Django 开发，调用 SaltStack Api，同时使用 Celery+Memcache 作任务队列;前端使用 ExtJS;线上部署使用 uwsgi 管理 Python 服务，Nginx 作请求转发"
+      # - 深度参与XX项目迭代XX的前端开发工作，独立承担并完成XX、XX、XXXX等功能点的开发，主要维护并修复XX、XX、XX等功能点bug若干。项目采用技术栈<mark>React+React Router+Node.js+SASS</mark>，实现<mark>前后端完全分离</mark>。
+      # - 配合UI和后端，根据产品需求提供H5页面嵌入到后台模板，要求<mark>移动端显示正常</mark>。
+      # - 主要参与XXXXXXX的静态页面开发工作，要求<mark>在支付宝环境下完全兼容</mark>。
+projects:
+  - name: "医学科学数据管理与共享平台"
+    url: "/"
+    stack: ThinkPHP+MongoDB+Axure
+    time: 201X.X-201X.X
+    goal: 实现多类型多来源医学科学数据的提交、管理和共享
+    team: 同 2 位同专业同学一起
+    contribution: 完成从<mark>“调研-设计-实现-文档”</mark>等工作，主要负责系统原型、功能框架及数据提交流程、元数据及源数据的管理与共享方案的设计以及系统开发等工作
+    result: 作品最终取得第三届共享杯国家级竞赛“一等奖” （2/2000）
+evaluation:
+  - |
+    "[此处如果有一些能够量化的、且比较个性的指标会有加分，比如喜爱跑步坚持夜跑200小时或者200km等]<span class="mark-txt">“多静多思考，反省不张扬”</span>是我给自己总结的“十字箴言”，鞭策自己做人既不能以己度人，也不以人观己，要脚踏实地做事，坚持自己的梦想和本心。"
+  - |
+    但行好事，莫问前程
+  - |
+    对自己的定位:主攻后端，接触、积累更多的架构设计方案;同时在其他方面，如前端，能做一些小工作，以便能 全面思考问题。
+  - |
+    对工作的期望:能接触到更多落地的技术，当然，若能参与落地过程，是最好的。 
+  - | 
+    对团队的期望:定期进行技术分享;有完整清晰的故障库。

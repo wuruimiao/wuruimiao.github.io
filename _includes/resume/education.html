@@ -1,0 +1,20 @@
+<!-- 教育经历 -->
+{%- if site.data.resume.education -%}
+{%- assign education = site.data.resume.education -%}
+<section class="edu info-unit">
+    <h2>
+        <i class="fa fa-graduation-cap" aria-hidden="true"></i>教育经历</h2>
+    <hr />
+    <ul>
+        {%- for item in education -%}
+        <li>
+                <h3>
+                    <span>{{ item.college }} - {{ item.major }}（{{ item.degree }}）</span>
+                    <time>{{ item.time }}</time>
+                </h3>
+                <p>{{ item.info }}</p>
+            </li>
+        {%- endfor -%}
+    </ul>
+</section>
+{%- endif -%}

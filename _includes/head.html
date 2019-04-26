@@ -1,0 +1,32 @@
+<!-- seo feed fonts settings -->
+<head>
+  <!-- h5新加 -->
+  <meta charset="utf-8">
+  <!-- http-equiv属性与content属性结合使用, http-equiv属性为指定所要模拟的标头字段的名称，content属性用来提供值。 -->
+  <!-- X-UA-Compatible IE8新加的设置，指示浏览器采取何种版本渲染当前页面 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- 移动端显示优化 -->
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
+  <!-- 该meta标签的作用是让当前viewport的宽度等于设备的宽度，同时不允许用户手动缩放。也许允不允许用户缩放不同的网站有不同的要求，但让viewport的宽度等于设备的宽度 -->
+  <!-- 参考：http://www.runoob.com/w3cnote/viewport-deep-understanding.html -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 验证网站所有权 -->
+  {% if site.owner.google.verify %}<meta name="google-site-verification" content="{{ site.owner.google.verify }}">{% endif %}
+  {% if site.owner.bing-verify %}<meta name="msvalidate.01" content="{{ site.owner.bing-verify }}">{% endif %}
+  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+
+  <script>
+    /* Cut the mustard */
+    if ( 'querySelector' in document && 'addEventListener' in window ) {
+      	// The browser supports these methods.
+      	// We can load our JS.
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + 'js';
+    }
+  </script>
+
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  {% if site.google_fonts %}
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family={%- for font in site.google_fonts -%}{{ font.name | replace: ' ', '+' }}{% if font.weights %}:{% endif %}{{ font.weights | remove: ' ' }}{% if forloop.last != true %}|{% endif %}{%- endfor -%}">
+  {% endif %}
+
+</head>

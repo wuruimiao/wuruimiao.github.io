@@ -1,0 +1,16 @@
+<!-- 自我评价 -->
+{%- if site.data.resume.evaluation -%}
+{%- assign evaluation = site.data.resume.evaluation -%}
+<section class="work info-unit">
+    <h2>
+        <i class="fa fa-pencil" aria-hidden="true"></i>自我评价/期望</h2>
+    <hr />
+    <ul>
+        {%- for item in evaluation -%}
+        <!-- <li>{{ item }}</li> -->
+        <p>{{ item }}</p>
+        {%- endfor -%}
+    </ul>
+
+</section>
+{%- endif -%}

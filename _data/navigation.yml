@@ -1,0 +1,18 @@
+# Sample site navigation bar links
+
+- title: 主页
+  url: /
+- title: 文章
+  url: /posts/
+- title: 目录
+  url: /categories/
+- title: 标签
+  url: /tags/
+# - title: Recipes
+#   url: /recipes/
+- title: 搜索
+  url: /search/
+# - title: External Page
+#   url: https://the-page.com/you-want-to-link-to.html
+- title: 简历
+  url: /resume/

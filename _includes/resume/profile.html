@@ -1,0 +1,109 @@
+<section class="side" id="side">
+    {%- include resume/fix_label.html -%}
+    <!-- 个人肖像 -->
+    <section class="me">
+        <section class="portrait">
+            <div class="loading">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!-- 头像照片 -->
+            <img class="avatar" src="{{ '/assets/images/avatar.jpg' }}" onload="loading()">
+        </section>
+
+        <h1 class="name">{{ site.data.resume.my_name }}</h1>
+        <h4 class="info-job">{{ site.data.resume.job }} / {{ site.data.resume.location }}</h4>
+    </section>
+
+    <!-- 基本信息 -->
+    {%- if site.data.resume.base -%}
+    {%- assign base = site.data.resume.base -%}
+    <section class="profile info-unit">
+        <h2>
+            <i class="fa fa-user" aria-hidden="true"></i>基本信息</h2>
+        <hr />
+        <ul>
+            {%- for item in base -%}
+            <li>
+                <label>{{ item.title }}</label>
+                <span>{{ item.info }}</span>
+            </li>
+            {%- endfor -%}
+        </ul>
+    </section>
+    {%- endif -%}
+
+    <!-- 联系方式 -->
+    {%- if site.data.resume.contact -%}
+    {%- assign contact = site.data.resume.contact -%}
+    <section class="contact info-unit">
+        <h2>
+            <i class="fa fa-phone" aria-hidden="true"></i>联系方式</h2>
+        <hr />
+        <ul>
+            {%- for item in contact -%}
+            {%- if item.title and item.info -%}
+            <li>
+                <label>{{ item.title }}</label>
+                {%- if item.url -%}
+                <a href="{{ item.url }}" target="_blank">{{ item.info }}</a>
+                {%- else -%}
+                <span>{{ item.info }}</span>
+                {%- endif -%}
+            </li>
+            {%- endif -%}
+            {%- endfor -%}
+        </ul>
+    </section>
+    {%- endif -%}
+
+    <!-- 技能点 -->
+    {%- if site.data.resume.skills -%}
+    {%- assign skills = site.data.resume.skills -%}
+    <section class="skill info-unit">
+        <h2>
+            <i class="fa fa-code" aria-hidden="true"></i>技能点</h2>
+        <hr />
+        <ul>
+            {%- for item in skills -%}
+            <li>
+                <label>{{item.title}}</label>
+                <progress value="{{item.achieve}}" max="{{item.peak}}"></progress>
+            </li>
+            {%- endfor -%}
+        </ul>
+    </section>
+    {%- endif -%}
+
+    {%- if site.data.resume.qrcode -%}
+    {%- assign url = site.data.resume.qrcode -%}
+    <section class="qrcode info-unit">
+        <h2><i class="fa fa-qrcode" aria-hidden="true"></i>二维码</h2>
+        <hr />
+        <img src="{{ url }}" style="width: 100%;" alt="">
+    </section>
+    {%- endif -%}
+
+    <!-- 技术栈 -->
+    {%- if site.data.resume.unskilled -%}
+    {%- assign unskilled = site.data.resume.unskilled -%}
+    <div class="stack info-unit">
+        <h2><i class="fa fa-code" aria-hidden="true"></i>其他</h2>
+        <hr />
+        <ul>
+            {%- for item in unskilled -%}
+            {%- if item.title and item.info -%}
+            <li>
+                <label>{{ item.title }}</label>
+                <span>{{ item.info }}</span>
+            </li>
+            {%- endif -%}
+            {%- endfor -%}
+        </ul>
+    </div>
+    {%- endif -%}
+
+</section>

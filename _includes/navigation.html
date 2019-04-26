@@ -1,0 +1,17 @@
+<nav class="sidebar-nav">
+  {% if site.data.navigation %}
+      {%- for link in site.data.navigation -%}
+        {%- if link.url contains '://' -%}
+          {%- assign url = link.url -%}
+        {%- else -%}
+          {%- assign url = link.url | relative_url -%}
+        {%- endif -%}
+        <span class="foldable">
+          <a class="sidebar-nav-item {% if page.url == url %}active{% endif %}" href="{{ url }}">
+            {{ link.title }}
+          </a>
+        </span>
+      {%- endfor -%}
+  {% endif %}
+  <!-- <span class="sidebar-nav-item">Currently v{{ site.version }}</span> -->
+</nav>
